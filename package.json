@@ -1,23 +1,20 @@
 {
-  "name": "burger",
+  "name": "mvc_design",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chueny/EAT-DA-Burger.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chueny/EAT-DA-Burger/issues"
-  },
-  "homepage": "https://github.com/chueny/EAT-DA-Burger#readme",
   "dependencies": {
-    "express-handlebars": "^4.0.4",
-    "mysql": "^2.18.1"
-  }
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
+  },
+  "description": ""
 }
