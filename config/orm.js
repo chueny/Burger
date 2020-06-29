@@ -71,29 +71,11 @@ var orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: function(table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
-
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
+  update: function(table, colName, newValue, id, cb) {
+    var queryString = "UPDATE ?? SET ?? = ? WHERE id =?";
 
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  },
-  delete: function(table, condition, cb) {
-    var queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, [table, colName, newValue, id], function(err, result) {
       if (err) {
         throw err;
       }
@@ -101,6 +83,20 @@ var orm = {
       cb(result);
     });
   }
+  // ,
+  // delete: function(table, condition, cb) {
+  //   var queryString = "DELETE FROM " + table;
+  //   queryString += " WHERE ";
+  //   queryString += condition;
+
+  //   connection.query(queryString, function(err, result) {
+  //     if (err) {
+  //       throw err;
+  //     }
+
+  //     cb(result);
+  //   });
+  // }
 };
 
 // Export the orm object for the model (burger.js).

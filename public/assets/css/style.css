@@ -1,7 +1,29 @@
+.container{
+  padding:auto;
+  margin:auto;
+  text-align:centre;
+}
+
+.text-center{
+  padding: 10px;
+  margin: 5px;
+  
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  /* background: #faebd7; */
+}
+.burgers-to-be-devoured{
+  margin-top: 30px;
+
+}
+
+.devoured-burgers{
+
+  margin-top: 50px;
+
 }
 
 .label {
@@ -12,6 +34,11 @@ li {
   padding: 5px;
   margin: 5px;
   background: aqua;
+}
+
+.devoured-burger{
+  border-radius: 8px;
+  
 }
 
 .form-group {
