@@ -2,18 +2,9 @@
 $(function() {
   $(".devoured-burger").on("click", function(event) {
    event.preventDefault();
-    //console.log("Am I hitting the change status DEVOURED button?");
+   
     var id = $(this).data("id");
     var newDevoured = {id: id};
-    //$(this).data("newDevoured");
-    //console.log("What is the id", id);
-    
-
-    // var newDevouredState = {
-    //   devoured: newDevoured
-    // };
-
-    console.log("What is the value of newDevured", newDevoured);
 
     // Send the PUT request.
     $.ajax("/api/burgers/devoured", {
@@ -32,10 +23,8 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-      console.log("Am I hitting the submit button?");
-      var newBurger = {name: $("#newBurger").val().trim(),
-      //devoured: $("[name=devoured]:checked").val().trim()
-      };
+    var newBurger = {name: $("#newBurger").val().trim(),
+    };
 
      
     // Send the POST request.
