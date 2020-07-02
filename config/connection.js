@@ -1,18 +1,22 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 
+console.log("process", process.env);
+
 var connection = mysql.createConnection({
   host: process.env.HOST,
   port: process.env.PORT,
-  user: process.env.USER,
+  user: process.env.USERNAME,
   password: process.env.PASSWORD,
   database: process.env.DATABASE
 });
 
+
+
 // Make connection.
 connection.connect(function(err) {
   if (err) {
-    console.error("error connecting: " + err.stack);
+    console.error("error connecting: " + err.stack, err.message);
     return;
   }
   console.log("connected as id " + connection.threadId);
