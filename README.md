@@ -7,9 +7,9 @@ This command line application allows user to enter burgers to a database and add
 Run npm install 
 
 # Link to Application 
-Link to repository on GitHub: https://github.com/chueny/Burger
+Link to repository on GitHub: https://chueny.github.io/Burger/
 
-Link to heroku: 
+Link to heroku: https://burger-chueny.herokuapp.com/
 
 # Screen Shot
 ![Screen Shot 2020-06-30 at 10 05 15 PM](https://user-images.githubusercontent.com/17972802/86198738-e645c800-bb1d-11ea-9146-4b420bf90bc9.png)
